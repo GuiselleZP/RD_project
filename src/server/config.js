@@ -1,4 +1,5 @@
 const exphbs = require('express-handlebars');
+
 // The path module allows to join directories
 const path = require('path');
 const morgan = require('morgan');
@@ -12,6 +13,7 @@ module.exports = app => {
 
   // Settings
   
+  
   app.set('port', process.env.PORT || 3000);
   app.set('views', path.join(__dirname, 'views'));
   app.engine('.hbs', exphbs({
@@ -24,7 +26,9 @@ module.exports = app => {
   }));
   app.set('view engine', '.hbs');
 
+
   // Middlewares
+
   
   // See by console, information about what the user is asking for.
   // 'dev' configuration will be used
@@ -43,15 +47,20 @@ module.exports = app => {
 
 
   // Routes
-  
+
+
   routes(app);
   
+
   //Static files
   
+
   app.use('/public', express.static(path.join(__dirname, '../public')));
+
 
   // errorhandlers
   
+
   if('development' == app.get('env')){
     app.use(errorHandler);
   }

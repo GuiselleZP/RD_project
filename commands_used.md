@@ -14,7 +14,7 @@
 	npm i express express-handlebars mongoose morgan multer fs-extra fs-extra errorhandler md5
 	```
 
-	1. **express*
+	1. **express**
 		
 		Node framework.
 	
@@ -46,4 +46,22 @@
 	sudo service mongod start
 	```
 
-1. 
+1. **Module to restart the server every time changes are made to the files**
+	
+	The '-D' option separates it from the dependency modules, since thus module
+	is not essential for the application, it is only useful during the
+	development process.
+
+	```
+	npm i nodemon -D
+	```
+
+	In the file 'package.json', in the section 'scripts', a new script called
+	'dev' was created, this is executed by console as follows:
+
+	```
+	npm run dev
+	```
+	
+	When executing this command, the 'nodemon src/index.js' command is 
+	executed.
