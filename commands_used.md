@@ -40,3 +40,10 @@
 	
 	1. **md5**
 	
+1. **Start mongodb service**
+	
+	```
+	sudo service mongod start
+	```
+
+1. 
