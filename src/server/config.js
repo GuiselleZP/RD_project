@@ -7,7 +7,7 @@ const multer = require('multer');
 const express = require('express');
 const errorHandler = require('errorhandler');
 
-const routes = require('../routes/index.js');
+const routes = require('../routes/index');
 
 module.exports = app => {
 
@@ -15,7 +15,7 @@ module.exports = app => {
   
   
   app.set('port', process.env.PORT || 3000);
-  app.set('views', path.join(__dirname, 'views'));
+  app.set('views', path.join(__dirname, '../views'));
   app.engine('.hbs', exphbs({
     defaultLayout: 'main',
     partialsDir: path.join(app.get('views'), 'partials'),
