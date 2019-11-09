@@ -5,7 +5,9 @@
     </h3>
   </div>
   <div class="card-body">
-   <form action="/images" method="POST">
+  <!-- enctype="multipart/from-data" indicates that apart from the strings,
+  heavy data will be sent as an image can be. -->
+   <form action="/images" method="POST" enctype="multipart/form-data">
     <div class="form-group">
       <div class="input-group">
         <!-- Bootstrap predefined button style -->
@@ -22,6 +24,11 @@
     </div>
     <div class="form-group">
       <textarea name="description" rows="2" class="form-control" placeholder="Description for the image" required></textarea>  
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success">
+        <i class="fa fa-upload"></i> Upload image
+      </button>
     </div>
    </form>
   </div>
